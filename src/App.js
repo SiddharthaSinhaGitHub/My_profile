@@ -31,16 +31,16 @@ export default function App() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [backgrounds.length]);
 
   return (
     <div className="app">
       {/* HERO SECTION */}
       <section
         className="hero"
-        // style={{
-        //   backgroundImage: `url(${backgrounds[bgIndex]})`,
-        // }}
+      // style={{
+      //   backgroundImage: `url(${backgrounds[bgIndex]})`,
+      // }}
       >
         <div className="overlay">
           <div className="logo-section">
