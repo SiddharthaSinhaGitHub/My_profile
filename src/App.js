@@ -19,10 +19,8 @@ import Dashboard3 from "./assets/Dashboard3.png";
 export default function App() {
   const certificates = [certificate1, certificate2, Certificate3, Certificate4];
 
-  // ✅ Background images
   const backgrounds = [appreciationBg, appreciationBg2, appreciationBg3];
 
-  // ✅ Shared slider state
   const [bgIndex, setBgIndex] = useState(0);
 
   useEffect(() => {
@@ -36,13 +34,30 @@ export default function App() {
   return (
     <div className="app">
       {/* HERO SECTION */}
-      <section
-        className="hero"
-      // style={{
-      //   backgroundImage: `url(${backgrounds[bgIndex]})`,
-      // }}
-      >
+      <section className="hero">
         <div className="overlay">
+
+          {/* ✅ DROPDOWNS */}
+          <div className="top-bar">
+            <div className="dropdown">
+              <button className="dropbtn">Clients</button>
+              <div className="dropdown-content">
+                <p>FCB - Infosys</p>
+                <p>STC - IBM</p>
+              </div>
+            </div>
+
+            <div className="dropdown">
+              <button className="dropbtn">AI Trainer Platforms</button>
+              <div className="dropdown-content">
+                <p>Outlier</p>
+                <p>RWS</p>
+                <p>Innodata</p>
+                <p>Turing</p>
+              </div>
+            </div>
+          </div>
+
           <div className="logo-section">
             <img src={companyLogoPrevious} alt="" className="company-logo previous-logo" />
             <img src={companyLogoCurrent} alt="" className="company-logo current-logo" />
@@ -152,9 +167,23 @@ export default function App() {
       <section id="contact" className="section contact">
         <h2>Contact</h2>
         <p>Email: sidsinha01beg@gmail.com</p>
-        <a href="https://www.linkedin.com/in/siddhartha-sinha-profile/" target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>
+        <div className="social-links">
+          <a
+            href="https://www.linkedin.com/in/siddhartha-sinha-profile/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/SiddharthaSinhaGitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
         <p>Phone: 9731227618</p>
       </section>
     </div>
